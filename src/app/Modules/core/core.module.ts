@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DreamEditComponent } from './Pages/dream-edit/dream-edit.component';
 import { DreamListComponent } from './Pages/dream-list/dream-list.component';
-import { DreamsRoutingModule } from './dreams-routing.module';
+import { CoreRoutingModule } from './core-routing.module';
 
 
 
@@ -14,7 +14,7 @@ import { DreamsRoutingModule } from './dreams-routing.module';
   ],
   imports: [
     CommonModule,
-    DreamsRoutingModule
+    CoreRoutingModule
   ]
 })
-export class DreamsModule { }
+export class CoreModule { }
