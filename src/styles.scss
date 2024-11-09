@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+
+}
+
+body.dark{
+    --color-primary : rgb(68, 41, 221);
+    --color-primary-l1: rgb(129, 114, 214);
+}
+
