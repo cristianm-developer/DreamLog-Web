@@ -1,0 +1,20 @@
+button {
+    all: unset; 
+}
+
+.iconBtn{
+    border-radius: 50%;
+    background-color: var(--colorBackground2);
+    color: var(--colorTheme1);
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+}
+
+.iconBtn:hover{
+    cursor: pointer;
+    background-color: var(--colorTheme2);
+}

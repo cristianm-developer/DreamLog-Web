@@ -1,56 +1,6 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@use './app/scss/imports.scss';
+@use './app/scss/theme.scss';
 
-body{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
-body.dark{
-    --rem:    12pt;       /* the base size of 1rem */
-    --navpos: absolute;   /* fixed | absolute */
-    --font-p: ...;        /* font shorthand for paragraphs */
-    --font-h: ...;        /* font shorthand for headings and captions */
-    --font-c: ...;        /* font shorthand for code */
-    --border: ...;        /* border shorthand */
-    --ornament: "‹‹ ››";  /* ornament content after sections */
-  
-    --cfg:   rgb(226, 226, 226);        /* foreground color for text  */
-    --cbg:   rgb(34, 34, 34);        /* background color for html  */
-    --cdark: #888;        /* dark gray for captions  */
-    --cmed:  #d1d1d1;     /* medium gray for borders, table separator  */
-    --clight:#f5f6f7;     /* light gray for different background (code) */
-    --clink: rgb(210, 210, 210);        /* color to indicate clickable elements */
-    --cemph: rgb(34, 34, 34);        /* the primary emphasis color of the theme */
-
-    --colorText1:   rgb(226, 226, 226);  
-    --colorText2:   rgb(147 147 147); 
-    --colorBackground1:   rgb(34, 34, 34);      
-    --colorBackground2:   rgb(77 72 72);
-    --colorBackground3:   rgb(195, 195, 195);
-    --colorTheme1: rgb(206, 206, 206);  
-    --colorTheme2: rgb(89, 42, 95);  
-}
-
-button {
-    all: unset; 
-}
-
-.iconBtn{
-    border-radius: 50%;
-    background-color: var(--colorBackground2);
-    color: var(--colorTheme1);
-    display: flex;
-    flex-wrap: wrap;
-    width: 35px;
-    height: 35px;
-    justify-content: center;
-    align-content: center;
-}
-
-.iconBtn:hover{
-    cursor: pointer;
-    background-color: var(--colorTheme2);
-}
+@use './app/scss/elements/buttons.scss';
+@use './app/scss/elements/cards.scss';
+@use './app/scss/elements/scrollbars.scss';
