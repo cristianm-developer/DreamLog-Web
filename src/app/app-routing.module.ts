@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './Modules/auth/Guardians/auth.guard';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./Modules/welcome/welcome.module').then(m => m.WelcomeModule)},
-  { path: 'user', loadChildren: () => import('./Modules/auth/auth.module').then(m => m.AuthModule), canActivate: []},
-  { path: 'api', loadChildren: () => import('./Modules/core/core.module').then(m => m.CoreModule), canActivate: []}
+  { path: '', loadChildren: () => import('./Modules/landing-page/landing-page.module').then(m => m.LandingPageModule)},
+  { path: 'app', loadChildren: () => import('./Modules/app/app-dream-log.module').then(m => m.AppDreamLogModule)},
 ];
 
 @NgModule({

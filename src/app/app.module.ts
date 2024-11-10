@@ -9,28 +9,19 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './Modules/auth/auth.module';
-import { SidebarComponent } from './Shared/Components/sidebar/sidebar.component';
-import { TopbarComponent } from './Shared/Components/topbar/topbar.component';
-import { CoreModule } from './Modules/core/core.module';
+
+import { AppDreamLogModule } from './Modules/app/app-dream-log.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    TopbarComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-    AuthModule,
-    CoreModule,
-
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
+    AppDreamLogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

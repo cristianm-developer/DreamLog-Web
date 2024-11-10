@@ -1,0 +1,15 @@
+<form (submit)="register()" [formGroup]="formGroup">
+    <div class="inputWrapper">
+        <label >Email</label>
+        <input type="text" formControlName="email">
+    </div>
+    <div class="inputWrapper">
+        <label >Password</label>
+        <input type="password" formControlName="password">
+    </div>
+    <div class="inputWrapper">
+        <label >Confirm Password</label>
+        <input type="password" formControlName="passwordConfirmation">
+    </div>
+    <button type="submit">Register</button>
+</form>
