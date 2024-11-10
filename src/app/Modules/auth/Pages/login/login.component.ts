@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import firebase from 'firebase/compat/app';
-
+import { FirebaseAuthService } from '../../../../Shared/Services/firebase-auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,11 +7,10 @@ import firebase from 'firebase/compat/app';
 })
 export class LoginComponent {
 
-  constructor(public afAuth: AngularFireAuth){}
+  constructor(private firebaseAuth: FirebaseAuthService){}
 
   async login(){
-    const ret = await this.afAuth.signInWithEmailAndPassword('teste@testador.com', '123456testeT');
-   
+    await this.firebaseAuth.loginWithEmailAndPassword('teste@testeemail.com', 'testepassword')
   }
 
 }
