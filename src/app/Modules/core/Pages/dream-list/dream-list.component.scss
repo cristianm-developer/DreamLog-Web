@@ -1,0 +1,46 @@
+:host{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url('/bg/bg1.jpeg');
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#DreamList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .dreamCard{
+        flex: 2 400px;
+        background-image: url('/bg/bg1.jpeg');
+        height: 250px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        
+        .core{
+            background-color: var(--colorBackground1);
+            color: var(--colorText1);
+            height: 60%;
+            padding: 15px;
+
+            h4{
+                margin: 0;
+            }
+
+            p{
+                color: var(--colorText2);
+            }
+        }
+    }
+
+    .dreamCard:hover{
+        cursor: pointer;
+        border: solid 2px var(--colorTheme2);
+    }
+}
