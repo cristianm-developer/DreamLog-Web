@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/src/environments/environment.ts
 
 # Node
 /node_modules
@@ -22,6 +23,7 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
+.angular/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
