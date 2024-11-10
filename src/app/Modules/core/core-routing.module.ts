@@ -4,8 +4,7 @@ import { DreamViewComponent } from './Pages/dream-view/dream-view.component';
 import { DreamEditComponent } from './Pages/dream-edit/dream-edit.component';
 
 const routes: Routes = [
-  { path:'v:id', component: DreamViewComponent },
-  { path: 'edit' , component: DreamEditComponent }
+  { path:'view', component: DreamViewComponent }
 ];
 
 @NgModule({
