@@ -19,7 +19,6 @@ export class DreamsDataService {
   }
 
   async CreateDream(title:string, content:string){
-    debugger
     let dreamToSave = {title, content, uid: this.userId } as Dream;
     const ret = await this.firestore.collection('Dreams').add(dreamToSave).catch( 
       (error) => {throw new Error(error.message)}
