@@ -3,7 +3,19 @@ body{
 }
 
 body.dark{
-    --color-primary : rgb(68, 41, 221);
-    --color-primary-l1: rgb(129, 114, 214);
+    --rem:    12pt;       /* the base size of 1rem */
+    --navpos: absolute;   /* fixed | absolute */
+    --font-p: ...;        /* font shorthand for paragraphs */
+    --font-h: ...;        /* font shorthand for headings and captions */
+    --font-c: ...;        /* font shorthand for code */
+    --border: ...;        /* border shorthand */
+    --ornament: "‹‹ ››";  /* ornament content after sections */
+  
+    --cfg:   #433;        /* foreground color for text  */
+    --cbg:   #fff;        /* background color for html  */
+    --cdark: #888;        /* dark gray for captions  */
+    --cmed:  #d1d1d1;     /* medium gray for borders, table separator  */
+    --clight:#f5f6f7;     /* light gray for different background (code) */
+    --clink: #07c;        /* color to indicate clickable elements */
+    --cemph: #088;        /* the primary emphasis color of the theme */
 }
-
