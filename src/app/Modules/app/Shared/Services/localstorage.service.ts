@@ -9,8 +9,12 @@ export class LocalstorageService {
 
   constructor() { }
 
-  set user(value:firebase.auth.UserCredential){
-    localStorage.setItem('user', JSON.stringify(value));
+  set user(value:firebase.auth.UserCredential|undefined)
+  {
+    if(!value)
+      localStorage.removeItem('user');
+    else
+      localStorage.setItem('user', JSON.stringify(value));
   }
   
   get user(){
@@ -19,6 +23,6 @@ export class LocalstorageService {
   }
 
   get uid(){
-    return this.user.user?.uid;
+    return this.user?.user?.uid;
   }
 }

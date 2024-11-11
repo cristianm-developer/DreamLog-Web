@@ -6,24 +6,26 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from '../../../../../environments/environment.development';
 
 import { RegisterComponent } from './Pages/register/register.component';
 import { LoginComponent } from './Pages/login/login.component';
-import { FirebaseAuthService } from './Services/firebase-auth.service';
+import { FirebaseAuthService } from '../../Shared/Services/firebase-auth.service';
+import { AuthComponent } from './auth.component';
+import { environment } from '../../../../../environments/environment';
+import { SharedModule } from '../../Shared/shared.module';
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
+    AuthComponent,
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
+    SharedModule,
 
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-
+    
     ReactiveFormsModule
   ],
   providers:[

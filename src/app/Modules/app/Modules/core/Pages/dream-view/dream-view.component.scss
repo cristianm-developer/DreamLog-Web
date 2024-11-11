@@ -2,73 +2,62 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background-image: url('/bg/bg1.jpeg');
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
-#DreamCard{
+.card{
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 20px;
     align-content: flex-start;
+    max-height: 100%;
+    overflow: hidden;
+}
 
-    #DreamCore{
-        flex: 1;
-        gap: 20px;
+#DreamCore{
+    flex: 1;
+    gap: 20px;
+    display: grid;
+    grid-template-rows:  auto 1fr;
+    flex-direction: column;
+    overflow: hidden;
+    
+
+    header{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        overflow: hidden;
-        height: 100%;
-        header{
-            flex: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: center;
-    
-            #Title{
-                flex: 1;
-                flex: 1 250px;
-                h3{
-                    margin: 0;
-                }
-            }
-        }
-    
-        main{
-            padding: 5px;
-            flex: 100%;
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            overflow-y: scroll;
-    
-            #DreamText{
-                width: 100%;
+        justify-items: flex-start;
+        justify-content: flex-start;
+        height: min-content;
+
+        #Title{
+            flex: 1;
+            height: min-content;
+
+            h3{
+                height: min-content;
                 margin: 0;
-                white-space: pre;
-                text-wrap: wrap;
-                font-family:sans-serif;
             }
         }
     }
 
-    #DreamSidebar{
-        flex: 0 200px;
+    main{
+        overflow: auto;
 
-        #DataInfo{
-            text-align: end;
-            color: var(--colorText2);
+        #TextWrapper{
+            display: flex;
+            text-wrap: wrap;
+            max-height: 100%;
+            text-overflow:ellipsis;
+            overflow-y: hidden;
         }
+
     }
-    
-    .editBtn{
-        position: fixed; 
-        bottom: 40px; 
-        right: 40px;
-        z-index: 2;
-    }
+}
+
+aside{
+    display: flex;
+    width: 200px;
 }

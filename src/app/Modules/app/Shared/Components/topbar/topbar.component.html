@@ -1,1 +1,11 @@
-<p>topbar works!</p>
+<div id="Logo">
+    <a [routerLink]="['list']">
+        <img src="/svg/logo.svg">
+    </a>
+</div>
+<nav class="navBtn">
+    <button (click)="logout()">
+        <i class="bi bi-door-closed"></i>
+        <span>Logout</span>
+    </button>
+</nav>

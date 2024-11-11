@@ -1,0 +1,30 @@
+$icon-size: 25px;
+
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 4px;
+    background-color: var(--colorBackground1);
+    align-items: center;
+    padding: 8px 0;
+    color: var(--colorText2) ;
+}
+
+a{
+    width: 100%;
+    padding: 8px 0px;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $icon-size;
+    cursor: pointer;
+    transition: color var(--timeHoverAnimation), background-color var(--timeHoverAnimation);
+
+    &:hover{
+        background-color: var(--colorBackground2);
+        color: var(--colorText1);
+    }
+}

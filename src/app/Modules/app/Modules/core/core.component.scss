@@ -1,0 +1,52 @@
+$sidebar-min-width: 40px;
+
+:host{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--cbg);
+
+    #BgImage{
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: fixed;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            opacity: .4;
+        }
+    }
+
+    :not(#BgImage){
+        z-index: 1;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    #ContentWrapper{
+        height: 100%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+
+        aside{
+            position: absolute;
+            width: $sidebar-min-width;
+            left: 0px;
+            height: 100%;
+        }
+
+        main{
+            margin-left: $sidebar-min-width;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}

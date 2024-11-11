@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FirebaseAuthService } from '../../Services/firebase-auth.service';
+import { FirebaseAuthService } from '../../../../Shared/Services/firebase-auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
