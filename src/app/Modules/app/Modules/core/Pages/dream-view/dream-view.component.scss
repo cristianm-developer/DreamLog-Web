@@ -4,60 +4,70 @@
     display: flex;
     padding: 20px;
     box-sizing: border-box;
-    position: relative;
 }
 
-.card{
-    width: 100%;
-    height: auto;
+#DreamCard{
     display: flex;
     padding: 20px;
     align-content: flex-start;
     max-height: 100%;
-    overflow: hidden;
-}
+    width: 100%;
 
-#DreamCore{
-    flex: 1;
-    gap: 20px;
-    display: grid;
-    grid-template-rows:  auto 1fr;
-    flex-direction: column;
-    overflow: hidden;
-    
-
-    header{
+    #DreamCore{
+        flex: 1;
+        gap: 20px;
         display: flex;
-        justify-items: flex-start;
-        justify-content: flex-start;
-        height: min-content;
+        flex-wrap: wrap;
+        overflow: hidden;
 
-        #Title{
+        header{
+            flex: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+    
+            #Title{
+                flex: 1;
+                flex: 1 250px;
+                h3{
+                    margin: 0;
+                }
+            }
+        }
+    
+        main{
+            padding: 5px;
             flex: 1;
-            height: min-content;
-
-            h3{
-                height: min-content;
+            display: flex;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+    
+            #DreamText{
+                width: 100%;
+                max-width: 600px;
                 margin: 0;
+                white-space: pre;
+                text-wrap: wrap;
+                font-family:sans-serif;
             }
         }
     }
 
-    main{
-        overflow: auto;
+    #DreamSidebar{
+        flex: 0 200px;
 
-        #TextWrapper{
-            display: flex;
-            text-wrap: wrap;
-            max-height: 100%;
-            text-overflow:ellipsis;
-            overflow-y: hidden;
+        #DataInfo{
+            text-align: end;
+            color: var(--colorText2);
         }
-
     }
-}
-
-aside{
-    display: flex;
-    width: 200px;
+    
+    .editBtn{
+        position: fixed; 
+        bottom: 40px; 
+        right: 40px;
+        z-index: 2;
+    }
 }

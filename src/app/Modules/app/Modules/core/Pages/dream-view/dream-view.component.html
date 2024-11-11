@@ -1,4 +1,5 @@
-<section class="card">
+
+<section id="DreamCard" class="card">
     <div id="DreamCore">
         <header> 
             <div id="Title">
@@ -7,13 +8,20 @@
                 </h3>
             </div>
         </header>
-        <main>
-            <div id="TextWrapper">
+        <main class="scrollbar">
+            <p id="DreamText">
                 {{texto}}
-            </div>
+            </p>
         </main>
     </div>
-    <aside>
-    
-    </aside>
+    <div id="DreamSidebar">
+        <aside>
+            <div id="DataInfo">
+                dd/mm/yyyy hh/mm
+            </div>
+            <button class="iconBtn editBtn">
+                <i class="bi bi-pencil-fill"></i>
+            </button>
+        </aside>
+    </div>
 </section>
