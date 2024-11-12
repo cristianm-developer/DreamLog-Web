@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { LocalstorageService } from '../../../Shared/Services/localstorage.service';
+import { LocalstorageService } from './localstorage.service';
+import { Route, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ export class FirebaseAuthService {
 
   constructor(
     private afAuth: AngularFireAuth,
-    private localstorage: LocalstorageService
+    private localstorage: LocalstorageService,
+    private router: Router
   ) { }
 
   async loginWithEmailAndPassword(email:string, password:string){
@@ -17,7 +19,6 @@ export class FirebaseAuthService {
       .catch((error) => {
         throw error.message;
       });
-
     this.localstorage.user = ret;
   }
 
@@ -32,6 +33,8 @@ export class FirebaseAuthService {
 
   async logout(){
     await this.afAuth.signOut();
+    this.localstorage.user = undefined;
+    this.router.navigate(['..','app','auth','login']);
   }
 
 }

@@ -1,0 +1,46 @@
+:host{
+    background-color: var(--colorBackground1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    color: var(--colorText2) ;
+}
+
+#Logo{
+    height: min-content;
+    padding-left: 4px;
+    opacity: .4;
+    cursor: pointer;
+    transition: opacity var(--timeHoverAnimation);
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover{
+        opacity: 1;
+    }
+
+    img{
+        height: 30px;
+        object-fit: scale-down;
+    }
+}
+
+.navBtn{
+    cursor: pointer;
+    padding: 10px;
+    transition: color var(--timeHoverAnimation), background-color var(--timeHoverAnimation);
+    &:hover{
+        background-color: var(--colorBackground2);
+        color: var(--colorText1);
+    }
+
+    button{
+        display: flex;
+        gap: 4px;
+    }
+}

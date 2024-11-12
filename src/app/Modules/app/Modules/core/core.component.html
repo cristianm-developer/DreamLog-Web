@@ -1,2 +1,10 @@
-<p>core works!</p>
-<router-outlet></router-outlet>
+<div id="BgImage">
+    <img src="bg/bg1.jpeg">
+</div>
+<header><app-topbar></app-topbar></header>
+<div id="ContentWrapper">
+    <aside><app-sidebar></app-sidebar></aside>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

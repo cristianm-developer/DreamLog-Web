@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { FirebaseAuthService } from './firebase-auth.service';
+import { FirebaseAuthService } from '../../../Shared/Services/firebase-auth.service';
 
 
 describe('FirebaseAuthService', () => {
