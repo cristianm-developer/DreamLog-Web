@@ -19,7 +19,6 @@ export class FirebaseAuthService {
       .catch((error) => {
         throw error.message;
       });
-
     this.localstorage.user = ret;
   }
 
