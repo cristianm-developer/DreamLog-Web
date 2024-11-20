@@ -6,6 +6,7 @@ import { CoreRoutingModule } from './core-routing.module';
 import { DreamViewComponent } from './Pages/dream-view/dream-view.component';
 import { CoreComponent } from './core.component';
 import { DreamsDataService } from './Services/dreams-data.service';
+import { SharedModule } from '../../Shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DreamsDataService } from './Services/dreams-data.service';
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    SharedModule,
   ],
   providers: [
     DreamsDataService
