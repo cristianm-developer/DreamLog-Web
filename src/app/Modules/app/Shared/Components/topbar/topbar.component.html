@@ -1,11 +1,13 @@
 <div id="Logo">
-    <a [routerLink]="['list']">
+    <a [routerLink]="['']">
         <img src="/svg/logo.svg">
     </a>
 </div>
-<nav class="navBtn">
+<ng-content>
+</ng-content>
+<!-- <nav class="navBtn">
     <button (click)="logout()">
         <i class="bi bi-door-closed"></i>
         <span>Logout</span>
     </button>
-</nav>
+</nav> -->

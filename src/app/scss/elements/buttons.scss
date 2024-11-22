@@ -2,6 +2,19 @@ button {
     all: unset; 
 }
 
+.button{
+    border-radius: var(--borderRadiusSm);
+    background-color: var(--colorTheme2);
+    padding: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: filter var(--timeHoverAnimation);
+
+    &:hover{
+        filter: var(--hoverFilter1);
+    }
+}
+
 .iconBtn{
     border-radius: 50%;
     background-color: var(--colorBackground2);

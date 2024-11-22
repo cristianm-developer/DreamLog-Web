@@ -1,12 +1,17 @@
-<form [formGroup]="formGroup" (submit)="login()">
-    <div class="inputWrapper">
-        <label >Email</label>
-        <input type="text" formControlName="email">
+<main class="card">
+    <div id="Logo">
+        <img src="/svg/logo.svg">
     </div>
-    <div class="inputWrapper">
-        <label >Password</label>
-        <input type="password" formControlName="password">
-    </div>
-    <button type="submit" >Login</button>
-</form>
-<a [routerLink]="['..', 'register']">Don't have an account yet?  Sign Up</a>
+    <form [formGroup]="formGroup" (submit)="login()">
+        <div class="inputWrapper">
+            <label >Email</label>
+            <input type="text" formControlName="email">
+        </div>
+        <div class="inputWrapper">
+            <label >Password</label>
+            <input type="password" formControlName="password">
+        </div>
+        <button class="button" type="submit" >Login</button>
+    </form>
+    <a id="RegisterLink" [routerLink]="['..', 'register']">Don't have an account yet?  Sign Up</a>
+</main>

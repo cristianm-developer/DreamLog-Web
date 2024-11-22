@@ -9,6 +9,8 @@ import { environment } from '../../../../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { FirebaseAuthService } from './Services/firebase-auth.service';
+import { TopbarButtonComponent } from './Components/topbar-button/topbar-button.component';
+import { LoadingScreenComponent } from './Components/loading-screen/loading-screen.component';
 
 
 
@@ -16,6 +18,8 @@ import { FirebaseAuthService } from './Services/firebase-auth.service';
   declarations: [
     SidebarComponent,
     TopbarComponent,
+    TopbarButtonComponent,
+    LoadingScreenComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +36,7 @@ import { FirebaseAuthService } from './Services/firebase-auth.service';
   exports: [
     SidebarComponent,
     TopbarComponent,    
+    LoadingScreenComponent,
   ]
 })
 export class SharedModule { }
