@@ -1,27 +1,70 @@
-# DreamLogWeb
+# Dream Log
+**Save Your Dreams, Share Your World**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+Dream Log is a web application designed to help users document their dreams, share them with others, and connect through the power of imagination. This project started as an initiative to practice and demonstrate best practices in Angular, Serverless Architecture, SCRUM Methodology, Firebase, and User Experience (UX). It aims to serve as both a functional application and a reference project for developers.
 
-## Development server
+Whether you're looking for inspiration, exploring innovative solutions, or starting your own project, Dream Log offers a practical example of implementing a CRUD application using modern technologies.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
++ _Dream Journal_: Record, edit, and organize your dreams in an intuitive interface.
++ _Community Sharing_: Share your dreams with others and explore their stories.
++ _Search and Filter_: Easily find dreams by keywords, categories, or dates.
++ _Responsive Design_: Optimized for both desktop and mobile experiences.
+## Tech Stack
+### Frontend:
++ Angular
++ TypeScript
++ CSS (Responsive Design)
++ Backend:
++ Serverless functions (Firebase Functions)
++ Firebase Firestore (NoSQL Database)
+### Other Tools:
++ Secure Encryption with CryptoJS for localStorage
++ Firebase Authentication
++ SCRUM Methodology for Agile Development
++ UX/UI principles for user-centric design
 
-## Code scaffolding
+## Getting Started
+Follow these steps to set up the project locally:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+````bash
+git clone https://github.com/your-username/dream-log.git  
+````
+2. Navigate to the project directory:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+````bash
+cd dream-log  
+````
 
-## Running unit tests
+3. Install dependencies:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+````bash
+npm install
+````
+4. Set up Firebase:
+- Create a Firebase project on the Firebase Console.
+- Configure Firestore and Firebase Authentication.
+- Add your Firebase configuration to the project (e.g., environment.ts file) under the variable name "firebaseConfig".
 
-## Running end-to-end tests
+5. Run the development server:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+````  
 
-## Further help
+6. Access the application in your browser with the url: http://localhost:4200
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Usage
+Feel free to use this project as a base for your own applications.
+
+## CRUD Reference
+Dream Log implements clean and modular CRUD operations with Angular and Firebase.
+Serverless Architecture: Explore how serverless functions are integrated to perform backend tasks.
+Agile Workflow: Understand how SCRUM was used to manage development.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+**Dream Log: Capture your dreams, inspire the world.**
