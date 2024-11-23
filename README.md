@@ -1,3 +1,5 @@
+> [!NOTE]
+> This project is still in an early stage of development, so it will have continuous updates on the layout and functionalities.
 # Dream Log
 **Save Your Dreams, Share Your World**
 
