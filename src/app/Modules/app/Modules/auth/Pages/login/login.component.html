@@ -2,11 +2,13 @@
     <div id="Logo">
         <img src="/svg/logo.svg">
     </div>
+    <h3>Login</h3>
     <form [formGroup]="formGroup" (submit)="login()">
         <div class="inputWrapper">
             <label >Email</label>
-            <input type="text" formControlName="email">
+            <input type="text" placeholder="myname@mail.com" formControlName="email">
         </div>
+        
         <div class="inputWrapper">
             <label >Password</label>
             <input type="password" formControlName="password">

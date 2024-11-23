@@ -12,8 +12,6 @@ import { FirebaseAuthService } from './Services/firebase-auth.service';
 import { TopbarButtonComponent } from './Components/topbar-button/topbar-button.component';
 import { LoadingScreenComponent } from './Components/loading-screen/loading-screen.component';
 
-
-
 @NgModule({
   declarations: [
     SidebarComponent,

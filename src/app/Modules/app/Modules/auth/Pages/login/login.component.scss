@@ -4,6 +4,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    color-scheme: dark;
 }
 
 main{
@@ -16,12 +17,6 @@ main{
         flex-direction: column;
         gap: 12px;
     }
-}
-
-.inputWrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
 }
 
 #Logo{
@@ -41,4 +36,19 @@ main{
     &:hover{
         opacity: 1;
     }
+}
+
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+
+    input{
+        padding-left: 8px;
+        height: 1.4rem;
+    }
+}
+
+h3{
+    text-align: center;
+    margin: 0;
 }
