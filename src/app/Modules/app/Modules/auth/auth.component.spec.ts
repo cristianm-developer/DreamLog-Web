@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthComponent } from './auth.component';
+import { SharedModule } from '../../Shared/shared.module';
+import { TopbarComponent } from '../../Shared/Components/topbar/topbar.component';
 
 describe('AuthComponent', () => {
   let component: AuthComponent;
@@ -8,7 +10,7 @@ describe('AuthComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AuthComponent]
+      declarations: [AuthComponent, TopbarComponent ]
     })
     .compileComponents();
 

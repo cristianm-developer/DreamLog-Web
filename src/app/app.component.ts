@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationStart, Router, RouterEvent } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ export class AppComponent {
     router.events.subscribe(e => this.navigationInterceptor(e as RouterEvent));
   }
 
-  navigationInterceptor(event: RouterEvent){
+  navigationInterceptor(event: RouterEvent){ 
     if(event instanceof NavigationStart)
       this.flgLoadingRouter = true;
     else if(

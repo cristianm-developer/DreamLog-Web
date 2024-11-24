@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { TopbarComponent } from './Components/topbar/topbar.component';
 import { CryptoService } from './Services/crypto.service';
 import { LocalstorageService } from './Services/localstorage.service';
@@ -15,7 +14,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    SidebarComponent,
     TopbarComponent,
     TopbarButtonComponent,
     LoadingScreenComponent,
@@ -34,7 +32,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     FirebaseAuthService
   ],
   exports: [
-    SidebarComponent,
     TopbarComponent,    
     LoadingScreenComponent,
     TopbarButtonComponent,
