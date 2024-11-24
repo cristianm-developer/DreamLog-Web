@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { LandingPageComponent } from './landing-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent}
+  { path: '', component: LandingPageComponent,
+    children: [
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: 'home', component: HomeComponent}
+    ]
+  }
 ];
 
 @NgModule({

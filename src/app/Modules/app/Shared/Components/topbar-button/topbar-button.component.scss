@@ -1,0 +1,15 @@
+.navBtn{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    transition: color var(--timeHoverAnimation), background-color var(--timeHoverAnimation);
+    &:hover{
+        background-color: var(--colorBackground2);
+        color: var(--colorText1);
+    }
+
+    button{
+        display: flex;
+        gap: 4px;
+    }
+}

@@ -1,10 +1,14 @@
 <div id="Logo">
-    <a [routerLink]="['list']">
+    <a [routerLink]="flgUserWithLogin? ['', 'app']:['']">
         <img src="/svg/logo.svg">
     </a>
 </div>
-<nav class="navBtn">
-    <button (click)="logout()">
+<div id="Buttons">
+    <ng-content>
+    </ng-content>
+</div>
+<nav class="navBtn" >
+    <button (click)="logout()" *ngIf="flgUserWithLogin">
         <i class="bi bi-door-closed"></i>
         <span>Logout</span>
     </button>

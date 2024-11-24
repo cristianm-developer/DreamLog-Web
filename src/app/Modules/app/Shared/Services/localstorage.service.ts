@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase/compat/app';
 import { CryptoService } from './crypto.service';
+import { User } from '../../Interfaces/user';
 
 
 @Injectable({
@@ -45,7 +46,23 @@ export class LocalstorageService {
     return this.getLocalStorage('user')
   }
 
+  set uName(value:String){
+    this.setLocalStorage('uName', value);
+  }
+
+  get uName(){
+    return this.getLocalStorage('uName');
+  }
+
   get uid(){
     return this.user?.user?.uid;
+  }
+
+  get userLogged(){
+    let user = {
+      uid: this.uid,
+      nome: this.uName
+    } as User
+    return user;
   }
 }

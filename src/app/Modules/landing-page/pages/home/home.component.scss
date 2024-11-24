@@ -1,20 +1,19 @@
 :host{
     display: flex;
+    >*{
+        flex: 1;
+    }
+    color: var(--colorText1);
+    padding: 24px;
+}
+
+main{
+    display: flex;
     flex-direction: column;
-    background-color: var(--color-primary);
-    border: 12px;
-
-    section{
-
-    }
+    padding: 24px;
+    background-color: var(--colorBackground1-opacity-8);
 }
 
-#Title{
-    h3{
-        
-    }
-}
-
-#MainWrapper{
-
+b{
+    text-align: end;
 }

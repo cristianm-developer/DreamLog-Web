@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './pages/home/home.component';
 import { LandingPageRoutingModule } from './landing-page-routing.module';
+import { LandingPageComponent } from './landing-page.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    LandingPageComponent
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,18 @@
-<span>teste</span>
+<section class="card" [formGroup]="formGroup">
+    <h3>New Dream</h3>
+    <div class="inputWrapper">
+        <label>Title</label>
+        <input type="text" formControlName="title">
+    </div>
+    <div class="inputWrapper">
+        <label>Content</label>
+        <textarea class="scrollbar" formControlName="content"></textarea>
+    </div>
+    <!-- <div class="inputWrapper">
+        <label>Tags (separed by commas)</label>
+        <input type="text"> 
+    </div> -->
+    <div id="ButtonsFooter">
+        <button class="button" (click)="saveDream()">Save</button>
+    </div>
+</section>

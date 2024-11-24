@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AppDreamLogModule } from './Modules/app/app-dream-log.module';
+import { SharedModule } from './Modules/app/Shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppDreamLogModule } from './Modules/app/app-dream-log.module';
     AppRoutingModule,
 
     AppDreamLogModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

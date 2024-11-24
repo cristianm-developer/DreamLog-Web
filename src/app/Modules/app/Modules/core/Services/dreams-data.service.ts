@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Dream } from '../../../Interfaces/dream';
+import { Dream, DreamFilter } from '../../../Interfaces/dream';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import firebase from 'firebase/compat/app';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +17,23 @@ export class DreamsDataService {
     this.userId = '1' //this.firebaseAuth.getUserId()!;
   }
 
-  async CreateDream(title:string, content:string){
-    let dreamToSave = {title, content, uid: this.userId } as Dream;
-    const ret = await this.firestore.collection('Dreams').add(dreamToSave).catch( 
+  async saveDream(dream: Dream){
+    const ret = await this.firestore.collection('Dreams').add(dream).catch( 
       (error) => {throw new Error(error.message)}
     );
     return ret.id;
+  }
+
+  async loadDreams(filter: DreamFilter){
+    let db = firebase.firestore();
+    let collectionRef = collection(db, 'Dreams');
+    let q = query(collectionRef, where('user.uid', '==', filter.uid));
+    const querySnapshot = await getDocs(q);
+    
+    const dreams: Dream[] = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    } as Dream));
+    return dreams;
   }
 }

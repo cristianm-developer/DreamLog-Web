@@ -1,0 +1,36 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    height: 100%;
+}
+section{
+    max-width: 700px;
+    flex: 1;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+}
+
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputWrapper:has(textarea){
+    flex: 1;
+
+    textarea{
+        height: 100%;
+    }
+}
+
+#ButtonsFooter{
+    display: flex;
+    justify-content: flex-end;
+    button{
+        padding: 8px;
+    }
+}

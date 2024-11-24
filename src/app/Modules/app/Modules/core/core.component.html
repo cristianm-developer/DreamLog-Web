@@ -1,9 +1,13 @@
 <div id="BgImage">
-    <img src="bg/bg1.jpeg">
+    <img src="bg/bg1.webp">
 </div>
-<header><app-topbar></app-topbar></header>
+<header>
+    <app-topbar>
+        <app-topbar-button title="My Dreams" icon="" [link]="['list']"></app-topbar-button>
+        <app-topbar-button title="New Dream" icon="" [link]="['edit']"></app-topbar-button>
+    </app-topbar>
+</header>
 <div id="ContentWrapper">
-    <aside><app-sidebar></app-sidebar></aside>
     <main>
         <router-outlet></router-outlet>
     </main>

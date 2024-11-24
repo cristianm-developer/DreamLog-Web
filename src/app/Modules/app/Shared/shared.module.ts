@@ -9,17 +9,21 @@ import { environment } from '../../../../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { FirebaseAuthService } from './Services/firebase-auth.service';
-
-
+import { TopbarButtonComponent } from './Components/topbar-button/topbar-button.component';
+import { LoadingScreenComponent } from './Components/loading-screen/loading-screen.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     SidebarComponent,
     TopbarComponent,
+    TopbarButtonComponent,
+    LoadingScreenComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
     
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
@@ -32,6 +36,9 @@ import { FirebaseAuthService } from './Services/firebase-auth.service';
   exports: [
     SidebarComponent,
     TopbarComponent,    
+    LoadingScreenComponent,
+    TopbarButtonComponent,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
