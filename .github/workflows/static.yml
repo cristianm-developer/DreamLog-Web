@@ -48,6 +48,6 @@ jobs:
         if: sucess()
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publishh_dir: dist
           enable_jekyll: true
