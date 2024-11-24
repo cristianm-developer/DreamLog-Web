@@ -45,7 +45,7 @@ jobs:
         run: npm run build:prod
 
       - name: Deploy
-        if: sucess()
+        if: success()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
