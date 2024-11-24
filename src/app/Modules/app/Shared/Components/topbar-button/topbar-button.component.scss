@@ -1,5 +1,6 @@
 .navBtn{
     cursor: pointer;
+    text-decoration: none;
     padding: 10px;
     transition: color var(--timeHoverAnimation), background-color var(--timeHoverAnimation);
     &:hover{

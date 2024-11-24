@@ -8,6 +8,11 @@
     </div>
 </head>
 <main id="DreamList">
+    <div>
+        <div *ngFor="let item of dreams">
+            <h4>{{item.title}}</h4>
+        </div>
+    </div>
     <div id="DreamCard" class="card">
         <div id="Core">
             <h3>

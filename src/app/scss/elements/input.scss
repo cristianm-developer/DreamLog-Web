@@ -1,89 +1,15 @@
 .inputWrapper{
 
-    input,input:-webkit-autofill{
+    input,input:-webkit-autofill,textarea{
+        color: var(--colorText1);
+        padding: 8px;
         appearance: none;
         outline: none;
         border: none;
         -webkit-box-shadow: 0 0 0px 40rem var(--colorBackground2) inset;
+        background-color: var(--colorBackground2);
+        resize: none;
+        border-radius: var(--borderRadiusSm);
     }
 
-    label{
-        
-    }
-
-    // position: relative;
-
-    // input{
-    //     font-family: inherit;
-    //     font-weight: 600;
-    //     width: 100%;
-    //     border: none;
-    //     border-bottom: 2px solid #9b9b9b;
-    //     outline: 0;
-    //     font-size: 17px;
-    //     color: #fff;
-    //     padding: 7px 0;
-    //     background: transparent;
-    //     transition: border-color 0.2s;
-
-    //     color-scheme: dark;
-
-    //     &:-webkit-autofill{
-    //         background-color: black !important;
-    //     }
-    // }
-
-    // input:-internal-autofill-selected {
-    //     background-color: rgb(155, 18, 18) !important;
-    //     background-image: none !important;
-    //     color: rgb(0, 0, 0) !important;
-    // }
-
-    // label{
-    //     position: absolute;
-    //     top: 4px;
-    //     z-index: 2;
-    //     transition: top var(--timeHoverAnimation);
-    // }
-
-    // &:has(input:focus) label{
-    //     top: -16px;
-    // }
-
-    // input{
-    // }
-
-    // input::placeholder{
-    //     color: transparent;
-    // }
-
-    // input:placeholder-shown ~ label {
-    //     font-size: 17px;
-    //     cursor: text;
-    //     top: 20px;
-    // }
-
-
-    // input:focus ~ label {
-    //     position: absolute;
-    //     margin-top: 8px;
-    //     top: 0;
-    //     display: block;
-    //     transition: 0.2s;
-    //     font-size: 18px;
-    //     color: var(--colorTheme1);
-
-    // }
-
-    // label{
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     margin-top: 8px;
-    //     display: block;
-    //     transition: 0.2s;
-    //     font-size: 17px;
-    //     color: var(--colorTheme1);
-    //     pointer-events: none;
-    // }
 }

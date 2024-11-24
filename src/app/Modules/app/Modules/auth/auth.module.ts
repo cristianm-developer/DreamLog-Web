@@ -11,7 +11,6 @@ import { RegisterComponent } from './Pages/register/register.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { FirebaseAuthService } from '../../Shared/Services/firebase-auth.service';
 import { AuthComponent } from './auth.component';
-import { environment } from '../../../../../environments/environment';
 import { SharedModule } from '../../Shared/shared.module';
 
 @NgModule({
