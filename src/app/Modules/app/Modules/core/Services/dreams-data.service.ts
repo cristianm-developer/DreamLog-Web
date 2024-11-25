@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Dream, DreamFilter } from '../../../Interfaces/dream';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, initializeFirestore, query, where } from 'firebase/firestore';
 import firebase from 'firebase/compat/app';
+import { LocalstorageService } from '../../../Shared/Services/localstorage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,10 @@ export class DreamsDataService {
   userId:string;
 
   constructor(
+    private localstorageService: LocalstorageService,
     private firestore: AngularFirestore,
   ) { 
-    this.userId = '1' //this.firebaseAuth.getUserId()!;
+    this.userId = this.localstorageService.uid!;
   }
 
   async saveDream(dream: Dream){
@@ -25,7 +27,7 @@ export class DreamsDataService {
   }
 
   async loadDreams(filter: DreamFilter){
-    let db = firebase.firestore();
+    let db =  firebase.firestore();
     let collectionRef = collection(db, 'Dreams');
     let q = query(collectionRef, where('user.uid', '==', filter.uid));
     const querySnapshot = await getDocs(q);
