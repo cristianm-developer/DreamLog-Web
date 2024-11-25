@@ -8,20 +8,24 @@ import { NavigationCancel, NavigationEnd, NavigationStart, Router, RouterEvent }
 })
 export class AppComponent {
   title = 'DreamLog-web';
-
-  flgLoadingRouter = true;
+  flgLoading = true;
 
   constructor(private router: Router){
     router.events.subscribe(e => this.navigationInterceptor(e as RouterEvent));
   }
 
   navigationInterceptor(event: RouterEvent){ 
-    if(event instanceof NavigationStart)
-      this.flgLoadingRouter = true;
+    if(event instanceof NavigationStart){
+      var el = document.querySelector('#LoadingScreen')
+      if(el) el.className = 'active';
+    }
     else if(
       event instanceof NavigationCancel 
       || event instanceof NavigationEnd 
       || event instanceof NavigationCancel)
-        this.flgLoadingRouter = false;
+        {
+          var el = document.querySelector('#LoadingScreen')
+          if(el) el.className = '';
+        }
   }
 }

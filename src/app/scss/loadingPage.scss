@@ -1,0 +1,31 @@
+#LoadingScreen{
+
+    &.active{
+        display: flex;
+    }
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100dvw;
+    height: 100dvh;
+    background: radial-gradient(circle, var(--colorBackground1) 19%, rgb(8, 8, 8) 100%);
+    color: var(--colorText1);
+    gap: 12px;
+
+    div{
+        animation-delay: 1s;
+    }
+    
+    img{
+        height: 15dvh;
+        width: 15dvh;
+    }
+}
+
+
