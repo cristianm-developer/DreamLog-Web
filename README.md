@@ -49,6 +49,23 @@ npm install
 - Create a Firebase project on the Firebase Console.
 - Configure Firestore and Firebase Authentication.
 - Add your Firebase configuration to the project (e.g., environment.ts file) under the variable name "firebaseConfig".
+````typescript
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  }
+};
+````
+- OPTIONAL: Store API Key in .env
+````env
+NG_APP_API_FIREBASE_KEY=<Insert your api key firebase here>
+````
 
 5. Run the development server:
 
