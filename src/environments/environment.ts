@@ -2,7 +2,7 @@ export const environment = {
     production: true,
     secretKey: "KeyToCrypt",
     firebaseConfig: {
-        apiKey: process.env["Firebase_Api_Key"] || '',
+        apiKey: import.meta.env.NG_APP_API_FIREBASE_KEY || '',
         authDomain: "",
         projectId: "",
         storageBucket: "",
