@@ -60,7 +60,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "etc/secrets/environment.ts"
+                  "with": ".../.../etc/secrets/environment.ts"
                 }
               ],
               "outputHashing": "all"
