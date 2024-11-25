@@ -57,6 +57,12 @@
                   "maximumError": "4kB"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "/etc/secrets/environment.ts"
+                }
+              ],
               "outputHashing": "all"
             },
             "development": {
