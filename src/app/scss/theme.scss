@@ -1,29 +1,85 @@
-body{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    margin: 0px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--fontBase);
+.Main-Theme-Dark-Dynamic{
+    --Color-Theme-HSL-h: 203;
+    --Color-Theme-HSL-s: 87%;
+    --Color-Theme-HSL-l: 45%;
+    --Color-Theme: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), var(--Color-Theme-HSL-l));
+
+    --Color-Theme-d1: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * .9));
+    --Color-Theme-d2: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * .75));
+    --Color-Theme-d3: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * .6));
+    --Color-Theme-d4: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * .3));
+
+    --Color-Theme-l1: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * 1.2));
+    --Color-Theme-l2: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * 1.3));
+    --Color-Theme-l3: hsl(var(--Color-Theme-HSL-h), var(--Color-Theme-HSL-s), calc(var(--Color-Theme-HSL-l) * 1.9));
+
+    --Color-Text: white;
+    --Color-Text2: rgb(228, 222, 222);
+
+    --Color-Bg: rgb(12, 12, 12);
+    --Color-Bg-Alpha-8: rgba(12, 12, 12, 0.8);
+    --Color-Bg-Alpha-4: rgba(12, 12, 12, 0.4);
+    --Color-Bg-Alpha-2: rgba(12, 12, 12, 0.226);
+
+    --Filter-Hover-Dark: brightness(1.1);
+    --Filter-Hover-Light: brightness(0.95);
+
+    --Border-Radius: 8px;
+    --Border-Radius-Sm: 2px;
+
+    --Padding: 12px;
+    --Padding-Sm: 4px;
+    --Padding-Xl: 18px;
+
+    --Shadown-Out: -0px -2px 12px -1px;
+    --Shadown-In: inset -4px 8px 42px -8px;
+
+    --Time-Animation-Hover: .3s;
+
+    --Image-Bg-LandingPage: url('/bg/bg-bed1.webp');
+
+    .theme {
+        background-color: var(--Color-Theme);
+        color: var(--Color-Text);
+    }
+    .theme-d1{
+        background-color: var(--Color-Theme-d1);
+        color: var(--Color-Text);
+    }
+    .theme-d2{
+        background-color: var(--Color-Theme-d2);
+        color: var(--Color-Text);
+    }
+    .theme-d3{
+        background-color: var(--Color-Theme-d3);
+        color: var(--Color-Text);
+    }
+    .theme-d4{
+        background-color: var(--Color-Theme-d4);
+        color: var(--Color-Text);
+    }
+
+    #Logo{
+        .inner { fill: white;}
+    }
+
+    .hover-drop-shadown{
+        transition: filter var(--Time-Animation-Hover);
+        &:hover{
+            filter: drop-shadow(0px 0px 2px var(--Color-Theme-l2));
+        }
+    }
+
 }
 
-body.dark{
-    --fontBase: cursive;
-    --colorText1:   rgb(226, 226, 226);  
-    --colorText2:   rgb(147 147 147); 
-    --colorBackground1:   rgba(22, 22, 22, 0.989); 
-    --colorBackground1-opacity-8:   rgba(26, 13, 41, 0.692);           
-    --colorBackground2:   rgb(77 72 72);
-    --colorBackground3:   rgb(195, 195, 195);
-    --colorTheme1: rgb(206, 206, 206);  
-    --colorTheme2: rgb(127, 32, 139);  
-
-    --timeHoverAnimation: .2s ease-in-out;
-
-    --borderRadius: 15px;
-    --borderRadiusSm: 6px;
-
-    --hoverFilter1: brightness(1.15);
+.Main-Text-Scheme-Rought{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    font-size: 1rem;
+    h1{ font-size: calc(1rem * 2.4);}
+    h2{ font-size: calc(1rem * 1.8);}
+    h3{ font-size: calc(1rem * 1.6);}
+    h4{ font-size: calc(1rem * 1.3);}
+    p,span,label,a{ font-size: 1rem;}
+    small{ font-size: calc(1rem * .6);}
 }

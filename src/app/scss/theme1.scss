@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontBase);
+}
+
+body.dark{
+
+    --imgBgCore: url("/bg/bg1.webp");
+
+    --fontBase: cursive;
+    --colorText1:   rgb(226, 226, 226);  
+    --colorText2:   rgb(147 147 147); 
+    --colorBackground1:   rgba(22, 22, 22, 0.989); 
+    --colorBackground1-opacity-8:   rgba(26, 13, 41, 0.692);           
+    --colorBackground2:   rgb(77 72 72);
+    --colorBackground3:   rgb(195, 195, 195);
+    --colorTheme1: rgb(206, 206, 206);  
+    --colorTheme2: rgb(127, 32, 139);  
+
+    --timeHoverAnimation: .2s ease-in-out;
+
+    --borderRadius: 15px;
+    --borderRadiusSm: 6px;
+
+    --hoverFilter1: brightness(1.15);
+}
