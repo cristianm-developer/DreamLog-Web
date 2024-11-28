@@ -4,11 +4,14 @@
         flex: 1;
     }
     color: var(--colorText1);
+    height: 100%;
+    align-items: center;
 }
 
 main{
     display: flex;
     flex-direction: column;
+    height: min-content;
     padding: 24px;
     gap: 12px;
     background-color: var(--Color-Bg-Alpha-2);
@@ -25,4 +28,8 @@ b{
 
 .text2{
     color: var(--Color-Text2);
+}
+
+.enter-from-right{
+    animation-delay: .2s;
 }

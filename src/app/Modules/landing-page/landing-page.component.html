@@ -1,4 +1,4 @@
-<header >
+<header class="enter-from-top">
     <div id="Logo">
         <a [routerLink]="['']">
             <img src="/svg/LogoDreamlog.svg">
@@ -10,14 +10,19 @@
         <a routerLinkActive="activeRoute" [routerLink]="['aboutUs']">About us</a>
         <a routerLinkActive="activeRoute" [routerLink]="['colaborate']">Colaborate</a>
     </nav>
-    <div id="AppButton">
+    <div id="AppButton" class="hide-sm">
         <a class="theme button" [routerLink]="['app']">{{flgUserWithLogin? 'Go to App' : 'Start now for free'}}</a>
     </div>
 </header>
 <main>
     <router-outlet></router-outlet>
 </main>
-<footer >
-    <div></div>
+<footer class="enter-from-bottom" >
+    <div >
+        <div  class="hide-md hide-l">
+            <a class="theme button" [routerLink]="['app']">{{flgUserWithLogin? 'Go to App' : 'Start now for free'}}</a>
+        </div>  
+    </div>
+
     <a class="hover-drop-shadown" href="https://github.com/cristianm-developer/DreamLog-Web" target="blank"><i class="bi bi-github"></i></a>
 </footer>

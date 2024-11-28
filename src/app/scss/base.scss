@@ -2,3 +2,19 @@ body{
     display: flex;
     overflow: hidden;
 }
+
+@media screen and (width <= 460px) {
+    .hide-sm{
+        display: none;
+    }
+}
+@media screen and (460px < width <= 800px) {
+    .hide-md{
+        display: none;
+    }
+}
+@media screen and ( 800px < width) {
+    .hide-l{
+        display: none;
+    }
+}
