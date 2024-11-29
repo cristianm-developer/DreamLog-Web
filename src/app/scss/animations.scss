@@ -1,4 +1,21 @@
 
+.rotate{
+	animation: rotate 2s linear both;
+    &-loop{
+        animation-name: rotate ;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+}
+@keyframes rotate {
+    0% {
+      transform: scale(1) rotateZ(0);
+    }
+    100% {
+      transform: scale(1) rotateZ(360deg);
+    }
+  }
+
 .rotate-scale-up {
 	animation: rotate-scale-up 0.65s linear both;
     &-loop{
@@ -33,3 +50,67 @@
     }
   }
   
+
+*:has(.enter-from-right),*:has(.enter-from-bottom),*:has(.enter-from-top){
+  position: relative;
+
+  >.enter-from-right {
+    translate: 100%;
+    animation: enter-from-right;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes enter-from-right {
+    0%{
+      translate: 100%;
+    }
+    100%{
+      translate: 0vw;
+    }
+  }
+
+  >.enter-from-top{
+    translate: 0 -100%;
+    animation: enter-from-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes enter-from-top {
+    0%{
+      translate: 0 -100%;
+    }
+    100%{
+      translate: 0 0;
+    }
+  }
+
+  >.enter-from-bottom{
+    translate: 0 100%;
+    animation: enter-from-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes enter-from-bottom {
+    0%{
+      translate: 0 100%;
+    }
+    100%{
+      translate: 0 0;
+    }
+  }
+
+}
+
+.fade-in{
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: .6s;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in{
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}

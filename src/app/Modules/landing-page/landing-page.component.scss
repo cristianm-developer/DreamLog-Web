@@ -6,7 +6,9 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: var(--colorBackground1);
+    background-color: var(--Color-Bg);
+    background-image: var(--Image-Bg-LandingPage);
+    background-size: cover;
 
     #BgImage{
         width: 100%;
@@ -34,20 +36,15 @@
     gap: 8px;
     color: var(--colorText1);
     cursor: pointer;
-    transition: opacity var(--timeHoverAnimation);
+    transition:  filter var(--Time-Animation-Hover);
 
-    a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
     &:hover{
-        opacity: 1;
+        filter: drop-shadow( 0px 0px 2px var(--Color-Theme-l2))
     }
 
     img{
-        height: 50px;
+        height: 35px;
         object-fit: scale-down;
     }
 }
@@ -55,26 +52,32 @@
 
 header{
     display: flex;
-    background-color: var(--colorBackground1-opacity-8);
     padding: 12px;
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: inset 0px -37px 53px 7px rgba(0, 0, 0, 0.418);
+    color: var(--Color-Text);
+    background-color: var(--Color-Bg-Alpha-2);
+    box-shadow: var(--Shadown-In) rgba(0, 0, 0, 0.418);
+}
+
+main{
+    flex: 1;
 }
 
 footer{
     display: flex;
-    background-color: var(--colorBackground1-opacity-8);
     padding: 12px;
     justify-content: space-between;
     align-items: center;
-
+    color: var(--Color-Text);
+    background-color: var(--Color-Bg-Alpha-2);
     box-shadow: inset 0px -37px 53px 7px rgba(0, 0, 0, 0.418);
 }
 
 .button{
     padding: 12px;
+    text-wrap: nowrap;
 }
 
 i.bi{
@@ -84,4 +87,42 @@ i.bi{
 
 a{
     text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex: 290px;
+    max-width: 500px;
+    justify-content: space-evenly;
+    
+    a{
+        cursor: pointer;
+        
+        transition: filter var(--Time-Animation-Hover);
+        &:hover{
+            filter: drop-shadow(0px 0px 4px var(--Color-Theme-l2));
+        }
+    }
+}
+
+nav:not(:has(*:hover)){
+    .activeRoute{
+        filter: drop-shadow(0px 0px 4px var(--Color-Theme-l2));
+    }
+}
+
+@media screen and (width <= 600px) {
+    header {
+        #Logo {
+            flex: 100%;
+        }
+
+        flex-wrap: wrap;
+    }
+}
+
+.enter-from-bottom,
+.enter-from-top
+{
+    animation-delay: .4s;
 }

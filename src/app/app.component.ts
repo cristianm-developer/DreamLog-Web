@@ -9,12 +9,16 @@ import { NavigationCancel, NavigationEnd, NavigationStart, Router, RouterEvent }
 export class AppComponent {
   title = 'DreamLog-web';
   flgLoading = true;
+  flgFirstLoad = false;
 
   constructor(private router: Router){
     router.events.subscribe(e => this.navigationInterceptor(e as RouterEvent));
   }
 
   navigationInterceptor(event: RouterEvent){ 
+    if(this.flgFirstLoad)
+      return;
+
     if(event instanceof NavigationStart){
       var el = document.querySelector('#LoadingScreen')
       if(el) el.className = 'active';
@@ -24,8 +28,11 @@ export class AppComponent {
       || event instanceof NavigationEnd 
       || event instanceof NavigationCancel)
         {
-          var el = document.querySelector('#LoadingScreen')
-          if(el) el.className = '';
+          setTimeout(() => {
+            var el = document.querySelector('#LoadingScreen')
+            if(el) el.className = '';
+            this.flgFirstLoad = true;
+          }, 500);
         }
   }
 }

@@ -4,16 +4,32 @@
         flex: 1;
     }
     color: var(--colorText1);
-    padding: 24px;
+    height: 100%;
+    align-items: center;
 }
 
 main{
     display: flex;
     flex-direction: column;
+    height: min-content;
     padding: 24px;
-    background-color: var(--colorBackground1-opacity-8);
+    gap: 12px;
+    background-color: var(--Color-Bg-Alpha-2);
+    border-radius: var(--Border-Radius) 0 var(--Border-Radius) 0;
 }
 
 b{
     text-align: end;
+}
+
+.text1{
+    color: var(--Color-Text);
+}
+
+.text2{
+    color: var(--Color-Text2);
+}
+
+.enter-from-right{
+    animation-delay: .2s;
 }

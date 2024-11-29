@@ -1,21 +1,28 @@
-<div id="BgImage">
-    <img src="bg/bg2.webp">
-</div>
-<header>
+<header class="enter-from-top">
     <div id="Logo">
         <a [routerLink]="['']">
-            <img src="/svg/logo.svg">
-        </a>
-        <h2>Dreamlog</h2>
+            <img src="/svg/LogoDreamlog.svg">
+        </a>       
     </div>
-    <div>
-        <a class="button" [routerLink]="['app']"> {{flgUserWithLogin? 'Go to App' : 'Start now for free'}}</a>
+    <nav>
+        <a routerLinkActive="activeRoute" [routerLink]="['home']">Welcome</a>
+        <a routerLinkActive="activeRoute" [routerLink]="['news']">News</a>
+        <a routerLinkActive="activeRoute" [routerLink]="['aboutUs']">About us</a>
+        <a routerLinkActive="activeRoute" [routerLink]="['colaborate']">Colaborate</a>
+    </nav>
+    <div id="AppButton" class="hide-sm">
+        <a class="theme button" [routerLink]="['app']">{{flgUserWithLogin? 'Go to App' : 'Start now for free'}}</a>
     </div>
 </header>
 <main>
     <router-outlet></router-outlet>
 </main>
-<footer>
-    <div></div>
-    <a href="https://github.com/cristianm-developer/DreamLog-Web" target="blank"><i class="bi bi-github"></i></a>
+<footer class="enter-from-bottom" >
+    <div >
+        <div  class="hide-md hide-l">
+            <a class="theme button" [routerLink]="['app']">{{flgUserWithLogin? 'Go to App' : 'Start now for free'}}</a>
+        </div>  
+    </div>
+
+    <a class="hover-drop-shadown" href="https://github.com/cristianm-developer/DreamLog-Web" target="blank"><i class="bi bi-github"></i></a>
 </footer>
