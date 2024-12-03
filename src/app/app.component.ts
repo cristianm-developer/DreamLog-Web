@@ -1,5 +1,6 @@
 import { Component, isDevMode } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationStart, Router, RouterEvent } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent {
 
   constructor(private router: Router){
     router.events.subscribe(e => this.navigationInterceptor(e as RouterEvent));
+    environment.firebaseConfig.apiKey = import.meta.env.NG_APP_API_FIREBASE_KEY ?? '';
   }
 
   navigationInterceptor(event: RouterEvent){ 

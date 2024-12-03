@@ -1,19 +1,34 @@
-<main class="card">
-    <div id="Logo">
-        <img src="/svg/logo.svg">
+<div id="Welcome">
+    <div id="HWrapper" >
+        <div id="WelcomeH" class="enter-from-left">
+            <h1>Hello, welcome back!</h1>
+            <h3 class="fade-in-blur">We are happy to see you again,</h3>
+            <h3 class="fade-in-blur">where your dreams are safely kept.</h3>
+        </div>
+    
+        <div id="Phrase">
+            <h4 class="fade-in-blur">"You have to have a dream to get up in the morning." – Billy Wilder</h4>
+        </div>
     </div>
-    <h3>Login</h3>
+    <div id="Logo">
+        <img class="fade-in-blur" src="/svg/logo.svg">
+    </div>
+</div>
+<main class="card enter-from-right">
+    
+
+    <h1><i id="LockIcon"  class="bi bi-lock-fill"></i>Login</h1>
     <form [formGroup]="formGroup" (submit)="login()">
         <div class="inputWrapper">
-            <label >Email</label>
-            <input type="text" placeholder="myname@mail.com" formControlName="email">
+            <h3 >Email</h3>
+            <input id="EmailInput" tabindex="1" type="text" placeholder="myname@mail.com" formControlName="email">
         </div>
         
         <div class="inputWrapper">
-            <label >Password</label>
-            <input type="password" formControlName="password">
+            <h3 >Password</h3>
+            <input id="PasswordInput" tabindex="2" type="password" formControlName="password">
         </div>
-        <button class="button" type="submit" >Login</button>
+        <button id="LoginButton" class="theme button" type="submit" ><h2>Login</h2></button>
     </form>
-    <a id="RegisterLink" [routerLink]="['..', 'register']">Don't have an account yet?  Sign Up</a>
+    <a id="RegisterLink" [routerLink]="['..', 'register']"><h4>Don't have an account yet?  Sign Up</h4></a>
 </main>

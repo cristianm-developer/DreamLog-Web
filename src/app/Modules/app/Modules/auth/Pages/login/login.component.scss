@@ -3,28 +3,122 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 100% ;
     color-scheme: dark;
+    user-select: none;
+    
+}
+
+#Welcome{
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    height: 100%;
+    color: var(--Color-Text);
+    text-shadow: rgba(0, 0, 0, 0.301) -5px -2px 5px;
+
+    h1{
+        font-size: 4vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+    h3{
+        font-size: 2vw;
+    }
+    h4{
+        font-size: 1.5vw;
+        user-select:text ;
+    }
+
+    #HWrapper{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 64px;
+    }
+
+    #WelcomeH{
+        h3{
+            opacity: 0;
+            animation-delay: 1s;
+        }
+    }
+
+    #Phrase{
+        h4{
+            opacity: 0;
+            animation-delay: 1.5s;
+        }
+    }
+
 }
 
 main{
+    flex: 0 600px;
+    justify-content: center;
+    padding: 24px 84px;
+    backdrop-filter: blur(12px);
+    background-color: var(--Color-Bg-Alpha-2);
+    height: 100%;
+    width: min-content;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    box-shadow: inset 10px 0px 28px 3px rgba(0, 0, 0, 0.13);
+
+    color: var(--Color-Text);
     form{
         display: flex;
         flex-direction: column;
         gap: 12px;
     }
+
+    h1{
+        margin-bottom: 8px;
+        text-shadow: rgba(0, 0, 0, 0.301) -5px -2px 5px;
+    }
+    h3{
+        text-shadow: rgba(0, 0, 0, 0.301) -5px -2px 5px;
+    }
+
+    .inputWrapper{
+        gap: 4px;
+    }
+
+    input{
+        -webkit-box-shadow: 0 0 0px 40rem rgba(0, 0, 0, 0.185) inset;
+        font-size: 1.6rem;
+        height: 6rem;
+        padding: 1rem;
+        transition: box-shadow var(--Time-Animation-Hover) ease-in-out;
+
+        &:focus{
+            box-shadow: drop-shadow(0px 0px 4px var(--Color-Theme));
+        }
+    }
+    
+    #LoginButton{
+        border-radius: var(--Border-Radius);
+    }
 }
 
 #Logo{
     height: 30dvh;
+    pointer-events: none;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    filter: drop-shadow(2px 5px 6px rgba(0, 0, 0, 0.312));
+    padding: 32px;
+
     img{
+        opacity: 0;
         height: 100%;
         object-fit: cover;
     }
@@ -32,7 +126,7 @@ main{
 
 #RegisterLink{
     opacity: .6;
-    transition: opacity var(--timeHoverAnimation);
+    transition: opacity var(--Time-Animation-Hover);
     &:hover{
         opacity: 1;
     }
@@ -48,7 +142,3 @@ main{
     }
 }
 
-h3{
-    text-align: center;
-    margin: 0;
-}
