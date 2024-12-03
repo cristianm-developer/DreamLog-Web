@@ -23,7 +23,6 @@ import { SharedModule } from '../../Shared/shared.module';
     CommonModule,
     AuthRoutingModule,
     SharedModule,
-
     
     ReactiveFormsModule
   ],

@@ -51,7 +51,7 @@
   }
   
 
-*:has(.enter-from-right),*:has(.enter-from-bottom),*:has(.enter-from-top){
+*:has(.enter-from-right),:has(.enter-from-left),*:has(.enter-from-bottom),*:has(.enter-from-top){
   position: relative;
 
   >.enter-from-right {
@@ -68,6 +68,22 @@
     }
     100%{
       translate: 0vw;
+    }
+  }
+
+  >.enter-from-left {
+    animation: enter-from-left;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier();
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes enter-from-left {
+    0%{
+      translate: -100%;
+    }
+    100%{
+      translate: 0;
     }
   }
 
@@ -113,4 +129,15 @@
 @keyframes fade-in{
   0% { opacity: 0;}
   100% { opacity: 1;}
+}
+
+.fade-in-blur{
+  animation-name: fade-in;
+  animation-duration: .6s;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in{
+  0% { opacity: 0; filter: blur(5px);}
+  100% { opacity: 1; filter: blur(0px);}
 }

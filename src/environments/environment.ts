@@ -2,7 +2,7 @@ export var environment = {
     production: true,
     secretKey: "KeyToCrypt",
     firebaseConfig: {
-        apiKey: import.meta.env.NG_APP_API_FIREBASE_KEY || '',
+        apiKey: '',
         authDomain: "dreamlog-df6e6.firebaseapp.com",
         projectId: "dreamlog-df6e6",
         storageBucket: "dreamlog-df6e6.firebasestorage.app",

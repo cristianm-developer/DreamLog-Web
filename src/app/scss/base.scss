@@ -1,6 +1,8 @@
 body{
     display: flex;
     overflow: hidden;
+    height: 100dvh;
+    width: 100dvw;
 }
 
 @media screen and (width <= 460px) {
